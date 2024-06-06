@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:2709",
+  "proxy": "https://adamzat-server.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
