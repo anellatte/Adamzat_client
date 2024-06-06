@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backendUrl = 'http://localhost:2709'; // The URL where your backend server is running
+const backendUrl = 'https://adamzat-server.onrender.com'; // The URL where your backend server is running
 
 // Create an instance of axios with the base URL and headers set
 const api = axios.create({
