@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset and base styles */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* HOME */
+body {
+    background-color: #EEF1F7;   
+}
+
+.container::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 200px;
+    transform: translate(-50%, -50%) rotate(30deg);
+    background-image: linear-gradient(to right, #77E6E6 50%, #F684C2 50%);
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1; 
+}
+
+.container {
+    padding: 20px 10px;
+    margin: auto;
+}
+
+.title {
+    width: 610px;
+    padding-bottom: 12px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    font-family: "Days One", sans-serif;
+    font-size: 36px;
+    border-bottom: 1px solid black;
+}
+
+.adamzat__inner {
+    width: 70%;
+    margin: auto;
+    padding: 70px 40px;
+    background-image: url('../public/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adamzat__desc {
+    flex-basis: 45%;
+}
+
+.desc__title {
+    font-family: 'Days One';
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.text {
+    font-size: 13px;
+    font-family: 'Days One';
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.desc__intro {
+    color: #9A8979;
+}
+
+.desc__text {
+    color: #ACA8A5; 
+}
+
+.span {
+    color: #2B5D19;
+}
+
+.adamzat__cover {
+    width: 85%;
+}
+
+.adamzat__img {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.adamzat__buttons {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 10px;
+    color: black;
+    background: linear-gradient(#A8ECEB, #F6D8E1);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.join_btn {
+    background: #221654;
+    color: white;
+    border: 1px solid #5BB4E2;
+}
+
+/* CREATE & JOIN ROOM */
+.room {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto';
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.create__title{
+    text-align: center;
+    font-family: 'Days One';
+    background-color:#221654;
+    color: white;
+    padding: 10px;
+    margin: 50px 0 10px;
+}
+
+.create__category {
+    margin-top: 2rem;
+}
+
+.create__title {
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.category__table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.category__item {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.category__item:hover {
+    background-color: #f0f0f0;
+}
+
+.category__item.selected {
+    background: linear-gradient(#A8ECEB, #F6D8E1);
+    color: black;
+    border-color:#221654;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background:#221654;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.errorMessage {
+    text-align: center;
+    font-size: 1rem;
+    color: #d9534f;
+    margin-top: 1rem;
+}
+
+.successMessage {
+    text-align: center;
+    font-size: 1rem;
+    color: #5cb85c;
+    margin-top: 1rem;
+}
+
+/* WAITING ROOM */
+.waiting {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wait__left, .wait_right {
+    text-align: center;
+}
+
+.wait__left {
+    background-color:#221654;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wait__right {
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wait__pin {
+    color: white;
+    font-family: 'Days One', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.wait__title {
+    color: #221654;
+    font-family: 'Days One', sans-serif;
+    margin-bottom: 10px;
+}
+
+.wait__players {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.wait__players li {
+    background-color: #221654;
+    border: 2px solid #221654;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.wait__players li:hover {
+    transform: scale(1.1);
+    background-color: #4682b4;
+    color: white;
+}
+
+.wait__players li[style*="color: black"] {
+    background: linear-gradient(#A8ECEB, #F6D8E1);
+    border-color: black;
+}
+
+.wait__btn{
+    width: 70%;
+}
+
+/* GAME PLAY */
+.game-container{
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game__desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-family: 'Days One', sans-serif;
+}
+
+.game__text{
+    background: linear-gradient(#A8ECEB, #F6D8E1);
+    padding: 5px 20px;
+    border-radius: 2px;
+}
+
+.letter{
+    background: #221654;
+    color: white;
+    padding: 5px 10%;
+}
+
+.timer{
+    background: rgb(172, 44, 44);
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-group:last-child, .form-label:last-child{
+    margin-bottom: 0;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* CHECK ROOM */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #221654;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+}
+
+td:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+td label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 12px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+td input[type="checkbox"]:checked + label {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.table_user{
+    padding-left: 12px;
+}
+
+/* RESULTS */
+.pedestal__inner{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    font-family: 'Days One';
+    color: #221654;
+}
+
+.place__box{
+    width: 200px;
+    box-shadow: inset -5px 0 5px -3px #0000002c, inset 5px 0 5px -3px #0000001c;
+    padding: 50px;
+}
+
+.place__number{
+    color: white;
+}
+
+.first{
+    height: 400px;
+    background: linear-gradient(#221654, #472fa7);
+}
+
+.second{
+    height: 300px;
+    background-color: #221654;
+}
+
+.third{
+    height: 200px;
+    background-color: #39258d;
+}
+
+.place__point{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place__title{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.results__table{
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .adamzat__inner {
+        background-image: none;
+        background-color: white;
+        border: 5px solid #221654;
+        border-radius: 3px;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .adamzat__desc {
+        flex-basis: 100%;
+    }
+
+    .adamzat__cover{
+        display: none;
+    }
+
+    .title {
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .adamzat__buttons {
+        width: 100%;
+    }
+
+    .button{
+        margin: 10px;
+    }
+
+    .wait__players li {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .wait__pin {
+        font-size: 1.5em;
+    }
+
+    .game__desc{
+        flex-direction: column;
+    }
+
+    .game__text{
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .adamzat__inner {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .desc__title, .text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .adamzat__buttons {
+        width: 100%;
+    }
+
+    .category__table {
+        grid-template-columns: 1fr;
+    }
+
+    .category__item {
+        font-size: 0.9rem;
+    }
+
+    .waiting{
+        flex-direction: column;
+    }
+
+    .wait__players li {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .wait__pin {
+        font-size: 1.5em;
+    }
+
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    th {
+        font-size: 14px;
+    }
+
+    .place__point{
+        width: 50px;
+        height: 50px;
+    }
+
+    .place__number{
+        font-size: 13px;
+    }
+
+    .place__box{
+        width: 150px;
+        padding: 20px;
+    }
+
+    .first{
+        height: 300px;
+    }
+    .second{
+        height: 230px;
+    }
+    .third{
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .create__title {
+        font-size: 1.2rem;
+    }
+
+    .category__item {
+        font-size: 0.8rem;
+    }
+
+    .wait__players li {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .wait__pin {
+        font-size: 1.2em;
+    }
+    .wait__btn {
+        width: 90%;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+    .place__point{
+        width: 30px;
+        height: 30px;
+    }
+
+    .place__number{
+        font-size: 10px;
+    }
+
+    .place__title{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .place__box{
+        width: 100px;
+        padding: 10px;
+    }
+
+    .first{
+        height: 200px;
+    }
+    .second{
+        height: 130px;
+    }
+    .third{
+        height: 80px;
+    }
+}
